@@ -1,0 +1,12 @@
+name: action
+
+on:
+workflow_dispatch:
+
+jobs:
+test-build-job:
+  runs-on: ubuntu-latest
+  steps:
+  -name: build initiate
+  run: mvn clean install -DskipTests=true
+  
